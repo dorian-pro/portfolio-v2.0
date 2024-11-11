@@ -6,4 +6,22 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.css';
+import './styles/theme.scss';
+import './styles/loading.scss';
+import './styles/app.scss';
+import './styles/navbar.scss';
+
+$(function() {
+
+    // affichage du loader
+    $('#loading').removeClass('active')
+
+    // menu mobile
+    $('#btn-mobile').on('click', function() {
+        // Bascule la classe "active" sur le bouton
+        $(this).toggleClass('active');
+        
+        // Bascule la classe "active" sur le menu
+        $('#navbar-nav').toggleClass('active');
+    });
+});
