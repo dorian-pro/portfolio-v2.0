@@ -1,0 +1,71 @@
+.animate-block{
+    --delay: 0;
+    --delayFadeIn: .8s;
+    position: relative;
+    overflow: hidden;
+    .block {
+        width: 0%;
+        height: 100%;
+        background: linear-gradient(114.3deg, rgb(19, 126, 57) 0.2%, rgb(5, 5, 5) 100%);
+        position: absolute;
+        animation: blockWidth 1s cubic-bezier(.74, .06, .4, .92) forwards;
+        display: flex;
+        animation-delay: var(--delay);
+        left: 0;
+        top: 0;
+        z-index: 3;
+        opacity: 0;
+        border-radius: 8px;
+    }
+
+    .animate-opacity{
+        animation: FadeIn 1s cubic-bezier(.74, .06, .4, .92) forwards;
+        opacity: 0;
+        overflow: hidden;
+        animation-delay: var(--delayFadeIn);
+    }
+}
+
+hr{
+    width: 0;
+    animation: widthSize 1s cubic-bezier(.74, .06, .4, .92) forwards;
+}
+
+@keyframes widthSize {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    } 
+}
+
+@keyframes blockWidth {
+    0% {
+      width: 0%;
+      left: 0;
+      
+  
+    }
+    60%{
+        opacity: 1;
+    }
+    50% {
+      width: 100%;
+      left: 0;
+  
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+}
+
+@keyframes FadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}

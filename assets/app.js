@@ -7,9 +7,13 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/theme.scss';
+
 import './styles/loading.scss';
 import './styles/app.scss';
 import './styles/navbar.scss';
+import './styles/animate_block.scss';
+
+import './styles/pages/home.scss';
 
 $(function() {
 
